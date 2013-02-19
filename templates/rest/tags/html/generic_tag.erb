@@ -1,0 +1,22 @@
+<h3><%= @label ? @label : YARD::Tags::Library.labels[@name] %>:</h3>
+<table class="<%= @name %> attributes">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>    
+  </thead>
+  <tbody>
+    <% object.tags(@name).each do |tag| %>
+      <tr>
+        <td class="name"><%= h tag.name %> <%= required_field(tag) %></td>
+        <td class="description">
+          <% if tag.text && !tag.text.empty? %>
+            <%= tag.text %>
+          <% end %>
+        </td>  
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

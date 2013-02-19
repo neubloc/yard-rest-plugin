@@ -1,0 +1,107 @@
+/* Override this file with custom rules */
+body {
+  margin: 10px;
+  padding: 0px;
+  font-family: Helvetica;
+  
+}
+h1 { 
+  border-bottom: 1px solid #dddddd; 
+  padding-bottom: 5px;
+}
+
+/* #filecontents h1:last-child {
+  page-break-before: always;
+  } */
+
+h1.resource_name {
+  page-break-before: always;
+}
+
+#content .tags + .service h1.resource_name { 
+  page-break-before: avoid;
+}
+
+#content > h1 { display: none; }
+
+.service h1 { 
+  font-size: 1.4em;
+  background: #8898ba;
+  color: white;
+  padding: 10px;
+  border: 0px;
+}
+.service h1 .minor_heading { 
+  color: white;
+}
+
+h2.title p {
+  display: inline;
+}
+
+ul.signature { 
+  background: #D1E2F8;
+  border: 0px;
+}
+
+ul.url {
+  background: #D1E2F8;
+  border: 0px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  font-family: Monaco,Consolas,Courier,monospace;
+  font-size: 1.1em;
+  font-weight: normal;
+  list-style: none outside none;
+  margin-top: 18px;
+  padding: 6px 10px;
+}
+
+ul.url li {
+  font-weight: bold;
+}
+
+pre.code,
+.tags .example { 
+  background: #efefef;
+  border: 0px;
+  padding: 10px;
+  color: #333;
+  
+}
+
+div.require_authentication {
+  font-style: italic;
+}
+
+table {
+  page-break-inside: avoid;
+}
+
+table.attributes { 
+  border-collapse: collapse; 
+  margin: 10px 0;
+  width: 100%;
+}
+table.attributes tr th:first-child { 
+  width: 200px;
+} 
+
+table.attributes.status_codes tr th:first-child {
+  width: auto;
+}
+
+table.attributes tr th { 
+  text-align: left;
+  border: 1px solid #d2d2d2;
+  padding: 4px 10px;
+}
+
+table.attributes tr td { 
+  border: 1px solid #d2d2d2;
+  padding: 4px 10px;
+}
+table.attributes .name {
+  color: #0064AC;
+}
+
+table.attributes .require { float: right; }

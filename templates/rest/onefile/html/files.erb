@@ -1,0 +1,4 @@
+<% @files.each do |file| %>
+  <% @file, @contents = file, read_file(file) %>
+  <%= diskfile %>
+<% end %>
